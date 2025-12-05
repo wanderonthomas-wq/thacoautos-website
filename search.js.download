@@ -1,0 +1,84 @@
+class Search {
+    constructor() {
+        this.events()
+    }
+    events() {
+        this.handleLogicChooseModel()
+        this.handleFillterYear()
+        this.handleFillterMonth()
+        this.handleFillterTime()
+        this.handleFilterFieldActivity();
+    }
+    handleLogicChooseModel() {
+        const element = $('.filter-list input[type="radio"]')
+        if (!!element) {
+            element.on('change', function(e) {
+
+                try {
+                    $('.form-search').submit()
+                } catch (error) {
+                    console.log('error: ', error);
+                }
+            })
+        }
+    }
+    handleFillterYear() {
+        const elementYear = $('#search-year-dt');
+        if (!!elementYear) {
+
+            elementYear.on('change', function(e) {
+
+                try {
+                    $('.form-search').submit()
+                } catch (error) {
+                    console.log('error: ', error);
+                }
+            })
+        }
+    }
+    handleFillterMonth() {
+        const elementMonth = $('#search-month-dt');
+        if (!!elementMonth) {
+
+            elementMonth.on('change', function(e) {
+
+                try {
+                    $('.form-search').submit()
+                } catch (error) {
+                    console.log('error: ', error);
+                }
+            })
+        }
+    }
+    handleFillterTime() {
+        const elementTime = $('#search-time-dt');
+        if (!!elementTime) {
+
+            elementTime.on('change', function(e) {
+
+                try {
+                    $('.form-search').submit()
+                } catch (error) {
+                    console.log('error: ', error);
+                }
+            })
+        }
+    }
+    handleFilterFieldActivity() {
+        const elementField = $('#field-id');
+        if (!!elementField) {
+
+            elementField.on('change', function(e) {
+
+                try {
+                    $('.form-search').submit()
+                } catch (error) {
+                    console.log('error: ', error);
+                }
+            })
+        }
+    }
+
+}
+
+new Search()
